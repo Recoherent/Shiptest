@@ -173,12 +173,9 @@
 
 		if("Hair Style")
 			//facial hair
-			if(H.gender == MALE)
-				var/new_style = input(owner, "Select a facial hair style.", "Facial Hair Alterations") as null|anything in GLOB.facial_hairstyles_list
-				if(new_style)
-					H.facial_hairstyle = new_style
-			else
-				H.facial_hairstyle = "Shaved" //Female characters can't have beards
+			var/new_fstyle = input(owner, "Select a facial hair style.", "Facial Hair Alterations") as null|anything in GLOB.facial_hairstyles_list
+			if(new_fstyle)
+				H.facial_hairstyle = new_fstyle
 			//normal hair
 			var/new_style = input(owner, "Select your hair style.", "Hair Style Alterations") as null|anything in GLOB.hairstyles_list
 			if(new_style)
